@@ -65,8 +65,9 @@ public class ActivityMain extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_tos) {
+            Intent intent = new Intent(ActivityMain.this, ActivityPrivacyPolicy.class);
+            startActivity(intent);
 
-            return true;
         } else if (id == R.id.action_logout){
             SharedPreferences sharedPreferences = getSharedPreferences(ActivitySplashScreen.MY_PREFERENCES,MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit().clear();
